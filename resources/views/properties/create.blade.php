@@ -1,7 +1,7 @@
-{{-- resources/views/properties/create.blade.php --}}
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container mt-4">
     <h2>Add New Property</h2>
     <div class="card p-4">
@@ -14,6 +14,7 @@
                 </ul>
             </div>
         @endif
+        
         <form action="{{ route('properties.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
@@ -58,6 +59,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Add Property</button>
         </form>
+        
     </div>
 </div>
 @endsection
